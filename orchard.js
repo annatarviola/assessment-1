@@ -56,7 +56,7 @@ for (let i = 0; i < fujiAcres.length; i++) {
 
 console.log(totalAcres)
 
-// For this, I knew it needed to loop through the index of each array. 
+// For this, I knew it needed to loop through the index of each array. Since they're all the same length, I drew from the first array's length. 
 // As it looped through, the three indexes from each array needed to be added together, then added to the totalArray variable,
 // so I carried out that process of addition.
 
@@ -156,9 +156,7 @@ for (let i = 0; i < fujiAcres.length; i++) {
     pinkTons.push(pinkAcres[i] * 6.5)
 }
 
-console.log(fujiTons)
-console.log(galaTons)
-console.log(pinkTons)
+console.log(fujiTons, galaTons, pinkTons)
 
 // Since it seemed like the easiest way to get the ton amount would just be to multiply 6.5 by whatever number was logged at each index,
 // I built the code around that math. It seemed easiest to simply push the numbers that would spit out onto the new, empty arrays.
@@ -182,15 +180,22 @@ console.log(pinkTons)
     Hint: there are 2000 pounds in a ton.
 */
 
-// CODE HERE 
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+for (let i = 0; i < fujiAcres.length; i++) {
 
+fujiPounds += fujiTons[i] * 2000
+galaPounds += galaTons[i] * 2000
+pinkPounds += pinkTons[i] * 2000
 
+}
 
+console.log(`Pounds of fuji: ${fujiPounds}, Pounds of gala: ${galaPounds}, Pounds of pink: ${pinkPounds},`)
 
+// I got lost in the sauce for about 20 minutes trying to figure out how to sum an array when I realized that I had forgotten the += operator used within a for loop.
+// With that, I was able to add up the conversions to pounds and assign them to the declared variables by looping through the array again.
 
 
 // PROBLEM 6
@@ -211,9 +216,11 @@ console.log(pinkTons)
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice
+let galaProfit = galaPounds * galaPrice
+let pinkProfit = pinkPounds * pinkPrice
+
+console.log(`You'll make $${fujiProfit} selling Fuji apples, $${galaProfit} selling Gala, and $${pinkProfit} selling Pink Ladies.`)
 
 
 
@@ -230,4 +237,5 @@ console.log(pinkTons)
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+console.log(`Your total apple-selling profit is $${totalProfit}.`)
