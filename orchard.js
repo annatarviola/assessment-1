@@ -77,7 +77,8 @@ let averageDailyAcres = totalAcres / 7
 
 console.log(averageDailyAcres)
 
-
+// There are 7 days in the week, so the average is found by dividing the number stored in totalAcres by 7. 
+// That math can be stored in the new averageDailyAcres variable.
 
 // PROBLEM 3
 
@@ -111,8 +112,12 @@ console.log(averageDailyAcres)
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
+while (acresLeft > 0) {
+    days += 1
+    acresLeft -= averageDailyAcres
+}
 
+console.log(days)
 
 
 // PROBLEM 4
@@ -141,11 +146,22 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
 
+for (let i = 0; i < fujiAcres.length; i++) {
+    fujiTons.push(fujiAcres[i] * 6.5)
+    galaTons.push(galaAcres[i] * 6.5)
+    pinkTons.push(pinkAcres[i] * 6.5)
+}
 
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
+
+// Since it seemed like the easiest way to get the ton amount would just be to multiply 6.5 by whatever number was logged at each index,
+// I built the code around that math. It seemed easiest to simply push the numbers that would spit out onto the new, empty arrays.
 
 
 
