@@ -159,8 +159,7 @@ for (let i = 0; i < fujiAcres.length; i++) {
 console.log(fujiTons, galaTons, pinkTons)
 
 // Since it seemed like the easiest way to get the ton amount would just be to multiply 6.5 by whatever number was logged at each index,
-// I built the code around that math. It seemed easiest to simply push the numbers that would spit out onto the new, empty arrays.
-
+// I built the code around that math. As the for loop looped through each index number, I had it push the multiplied number into the new arrays
 
 
 
@@ -194,7 +193,8 @@ pinkPounds += pinkTons[i] * 2000
 
 console.log(`Pounds of fuji: ${fujiPounds}, Pounds of gala: ${galaPounds}, Pounds of pink: ${pinkPounds},`)
 
-// I got lost in the sauce for about 20 minutes trying to figure out how to sum an array when I realized that I had forgotten the += operator used within a for loop.
+// I got lost in the sauce for about 20 minutes trying to figure out how to sum an array 
+// when I realized it would be easier to just use the += operator used within a for loop again, combining the ideas from Problems 1 & 4.
 // With that, I was able to add up the conversions to pounds and assign them to the declared variables by looping through the array again.
 
 
@@ -222,8 +222,8 @@ let pinkProfit = pinkPounds * pinkPrice
 
 console.log(`You'll make $${fujiProfit} selling Fuji apples, $${galaProfit} selling Gala, and $${pinkProfit} selling Pink Ladies.`)
 
-
-
+// Since the profits would be the price multiplied by the number of pounds of apples, 
+// I wrote out that formula with each set of variables.
 
 
 
@@ -239,3 +239,5 @@ console.log(`You'll make $${fujiProfit} selling Fuji apples, $${galaProfit} sell
 
 let totalProfit = fujiProfit + galaProfit + pinkProfit
 console.log(`Your total apple-selling profit is $${totalProfit}.`)
+
+// similar to above, writing out the math with the populated variables.
